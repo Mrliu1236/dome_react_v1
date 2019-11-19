@@ -1,7 +1,7 @@
 // 全局scss变量和公共占位类
 
 // colors
-$theme-color: rgb(236, 129, 129);
+$theme-color: rgb(106, 243, 136);
 
 // %placeholder
 %transition {
@@ -9,5 +9,5 @@ $theme-color: rgb(236, 129, 129);
 }
 
 %with-shadow {
-  box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 10px #555;
 }
