@@ -1,0 +1,13 @@
+// 全局scss变量和公共占位类
+
+// colors
+$theme-color: rgb(236, 129, 129);
+
+// %placeholder
+%transition {
+  transition: all 0.25s;
+}
+
+%with-shadow {
+  box-shadow: 0 0 5px #000;
+}
