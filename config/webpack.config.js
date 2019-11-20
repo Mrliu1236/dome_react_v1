@@ -63,12 +63,12 @@ module.exports = function(webpackEnv) {
     : '[hash:base64:10]'
 
   // 在所有的'.scss'文件中注入全局scss变量
-  function injectStyleResource() {
+  function injectScssResource() {
     return [
       {
-        loader: require.resolve('style-resources-loader'),
+        loader: 'sass-resources-loader',
         options: {
-          patterns: [path.resolve(__dirname, '../src/styles/variables.scss')],
+          resources: [path.resolve(__dirname, '../src/styles/variables.scss')],
         },
       },
     ]
@@ -497,7 +497,7 @@ module.exports = function(webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
                 'sass-loader'
-              ).concat(injectStyleResource()),
+              ).concat(injectScssResource()),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.
@@ -516,7 +516,7 @@ module.exports = function(webpackEnv) {
                   localIdentName: scopedName,
                 },
                 'sass-loader'
-              ).concat(injectStyleResource()),
+              ).concat(injectScssResource()),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.

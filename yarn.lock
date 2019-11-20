@@ -1853,7 +1853,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.npm.taobao.org/async-limiter/download/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha1-3TeelPDbgxCwgpH51kwyCXZmF/0=
 
-async@^2.6.2:
+async@^2.1.4, async@^2.6.2:
   version "2.6.3"
   resolved "https://registry.npm.taobao.org/async/download/async-2.6.3.tgz?cache=0&sync_timestamp=1563385399810&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fasync%2Fdownload%2Fasync-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
   integrity sha1-1yYl4jRKNlbjo61Pp0n6gymdgv8=
@@ -6132,7 +6132,7 @@ loader-runner@^2.4.0:
   resolved "https://registry.npm.taobao.org/loader-runner/download/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
   integrity sha1-7UcGa/5TTX6ExMe5mYwqdWB9k1c=
 
-loader-utils@1.2.3, loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
+loader-utils@1.2.3, loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.0.4, loader-utils@^1.1.0, loader-utils@^1.2.3:
   version "1.2.3"
   resolved "https://registry.npm.taobao.org/loader-utils/download/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   integrity sha1-H/XcaRHJ8KBiUxpMBLYJQGEIwsc=
@@ -8962,6 +8962,16 @@ sass-loader@7.2.0:
     pify "^4.0.1"
     semver "^5.5.0"
 
+sass-resources-loader@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/sass-resources-loader/download/sass-resources-loader-2.0.1.tgz#c8427f3760bf7992f24f27d3889a1c797e971d3a"
+  integrity sha1-yEJ/N2C/eZLyTyfTiJoceX6XHTo=
+  dependencies:
+    async "^2.1.4"
+    chalk "^1.1.3"
+    glob "^7.1.1"
+    loader-utils "^1.0.4"
+
 sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -8991,7 +9001,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.2.0, schema-utils@^2.5.0:
+schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.2.0:
   version "2.5.0"
   resolved "https://registry.npm.taobao.org/schema-utils/download/schema-utils-2.5.0.tgz#8f254f618d402cc80257486213c8970edfd7c22f"
   integrity sha1-jyVPYY1ALMgCV0hiE8iXDt/Xwi8=
@@ -9636,16 +9646,6 @@ style-loader@1.0.0:
   dependencies:
     loader-utils "^1.2.3"
     schema-utils "^2.0.1"
-
-style-resources-loader@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.npm.taobao.org/style-resources-loader/download/style-resources-loader-1.3.2.tgz#dee034e33e84060ded0b1980f866453e98589873"
-  integrity sha1-3uA04z6EBg3tCxmA+GZFPphYmHM=
-  dependencies:
-    glob "^7.1.6"
-    is-promise "^2.1.0"
-    loader-utils "^1.2.3"
-    schema-utils "^2.5.0"
 
 stylehacks@^4.0.0:
   version "4.0.3"
