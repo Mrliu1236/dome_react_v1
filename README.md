@@ -29,3 +29,8 @@ injectStyleResource
 ### 5.mobx@4.x
 
 由于`mobx@5.x`使用的是`Proxy`功能,在 ie 下无法使用,因此使用 4.x 的版本
+
+### 6.打包模式
+
+1. `build` - 保留`source-map`和`debug`.方便检错.
+2. `build:prod` - 正式发布版

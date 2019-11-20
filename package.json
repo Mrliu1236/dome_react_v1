@@ -70,6 +70,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "build:prod": "cross-env GENERATE_SOURCEMAP=false REMOVE_LOGS=true node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
@@ -136,5 +137,7 @@
     ]
   },
   "homepage": ".",
-  "devDependencies": {}
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
 }
