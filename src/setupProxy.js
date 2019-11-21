@@ -14,7 +14,7 @@ function createProxy(path = '', target = '') {
 
 module.exports = function(app) {
   app.use(
-    createProxy('/proxy', 'http://172.16.132.120:8888'),
-    createProxy('/api-abc', 'http://172.16.132.100:9999')
+    createProxy('/proxy', 'http://www.aaa.com/api'),
+    createProxy('/api-abc', 'http://www.bbb.com/api')
   )
 }
