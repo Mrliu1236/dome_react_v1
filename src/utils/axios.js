@@ -39,11 +39,13 @@ axiosIns.interceptors.request.use(
 
 axiosIns.interceptors.response.use(
   response => {
-    if (response.data.code === 20000) {
-      return response.data
-    } else {
-      return Promise.reject(response.data)
-    }
+    // if (response.data.code === 20000) {
+    //   return response.data
+    // } else {
+    //   return Promise.reject(response.data)
+    // }
+
+    return response.data
   },
   error => {
     return Promise.reject(error)
