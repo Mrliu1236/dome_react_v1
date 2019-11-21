@@ -1,8 +1,0 @@
-$font-size: 28px;
-
-.container {
-  @extend %with-shadow;
-  border: 1px solid #000;
-  color: $theme-color;
-  font-size: $font-size;
-}

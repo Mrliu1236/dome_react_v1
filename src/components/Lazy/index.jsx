@@ -1,6 +1,6 @@
 import React from 'react'
 import Loadable from 'react-loadable'
-import styles from './styles.module.scss'
+import styles from './styles.module.less'
 
 function Loading() {
   return <p className={styles.container}>加载中...</p>

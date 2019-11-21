@@ -34,3 +34,7 @@ injectStyleResource
 
 1. `build` - 保留`source-map`和`debug`.方便检错.
 2. `build:prod` - 正式发布版
+
+### 7.css 预编译
+
+由于`node-sass`存在版本不兼容问题,选择`less`.

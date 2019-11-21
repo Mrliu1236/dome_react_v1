@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
-import styles from './styles.module.scss'
+import styles from './styles.module.less'
 
 // 注入多个store模块
 @inject('counter', 'post')
