@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import Lazy from '@/components/Lazy'
+import loadable from '@loadable/component'
 
-const Home = Lazy(() => import('@/pages/Home'))
+const Home = loadable(() => import('@/pages/Home'))
 
 function App() {
   return (

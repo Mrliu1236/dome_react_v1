@@ -6,6 +6,8 @@
 
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
+
+import { Button } from '@/components'
 import styles from './styles.module.less'
 
 // 注入多个store模块
@@ -22,8 +24,12 @@ class Home extends Component {
     return (
       <div className={styles.container}>
         <p>count: {count}</p>
-        <button onClick={add}>add</button>
-        <button onClick={addSync}>addSync</button>
+        <Button block onClick={add}>
+          add
+        </Button>
+        <Button theme="dark" onClick={addSync}>
+          addSync
+        </Button>
 
         <p>posts: {list.length}</p>
       </div>
