@@ -16,11 +16,11 @@
 '@': path.resolve(__dirname, '../src'),
 ```
 
-### 4.注入全局'scss'变量
+### 4.注入全局'less'变量
 
-方便用于复用,在所有的`.scss`文件中默认引入变量文件和公共类.
+方便用于复用,在所有的`.less`文件中默认引入变量文件和公共类.
 
-`config/webpack.config.js`
+`config/webpack.config.js`. 虽然使用的是`sass-resources-loader`,但对 less 也有效果.另外`style-reource-loader`这个插件有问题, 修改全局文件的时候,无法触发热更新.
 
 ```
 injectStyleResource
