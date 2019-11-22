@@ -2,6 +2,8 @@
 
 ### 1.loadable
 
+使用`@loadable/component`, 用于组件懒加载.
+
 ### 2.'home-page'
 
 用于打包时,资源路径使用的是相对路径.即`./`开头

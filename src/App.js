@@ -8,12 +8,21 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/" render={props => <Home {...props} />} />
+        <RouteWithProps exact path="/" component={Home} />
 
         <Redirect to="/" />
       </Switch>
     </>
   )
+}
+
+/**
+ * @description 接收RouterProps
+ * @param {React.ComponentClass} component
+ */
+function RouteWithProps({ component, ...rest }) {
+  const WrapperComponent = component
+  return <Route {...rest} render={props => <WrapperComponent {...props} />} />
 }
 
 export default App
