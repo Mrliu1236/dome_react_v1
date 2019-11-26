@@ -40,3 +40,35 @@ injectStyleResource
 ### 7.css 预编译
 
 由于`node-sass`存在版本不兼容问题,选择`less`.
+
+### 8.polyfill
+
+`babel@7.4`开始不再使用[@babel/polyfill](https://babeljs.io/docs/en/v7-migration#remove-proposal-polyfills-in-babel-polyfill-https-githubcom-babel-babel-issues-8416).
+
+```
+yarn add core-js@^3 regenerator-runtime
+```
+
+`.babelrc`
+
+```
+{
+  "presets": [
+    "react-app",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3 //使用3.x
+      }
+    ]
+  ],
+}
+```
+
+`src/index.js`
+
+```
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+```
