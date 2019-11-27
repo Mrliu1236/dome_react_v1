@@ -1,11 +1,16 @@
-import { observable, action, runInAction } from 'mobx'
+import { observable, action, runInAction, autorun, computed } from 'mobx'
 
 class CounterStore {
   @observable count = 0
+  @observable name = 'lp'
+
+  constructor() {
+    autorun(() => console.log('count', this.count))
+  }
 
   @action
-  add = () => {
-    this.count++
+  start = value => {
+    this.count = value
   }
 
   @action
@@ -14,6 +19,9 @@ class CounterStore {
     runInAction(() => {
       this.count++
     })
+  }
+  @computed get myTostring() {
+    return this.name + ':' + this.count
   }
 }
 

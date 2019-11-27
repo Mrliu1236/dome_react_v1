@@ -19,19 +19,20 @@ class Home extends Component {
   }
 
   render() {
-    const { count, add, addSync } = this.props.counter
+    const { count, add, addSync, myTostring } = this.props.counter
     const { list } = this.props.post
     return (
       <div className={styles.container}>
         <p>count: {count}</p>
-        <Button block onClick={add}>
-          add
+        <Button block onClick={() => this.props.counter.start(100)}>
+          重置
         </Button>
         <Button theme="dark" onClick={addSync}>
           addSync
         </Button>
 
         <p>posts: {list.length}</p>
+        <p>{myTostring}</p>
       </div>
     )
   }
